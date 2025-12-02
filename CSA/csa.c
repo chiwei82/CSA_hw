@@ -140,6 +140,9 @@ void test(void)
    assert(csa_get(c, 100, &n));
    assert(n==100);
    csa_tostring(c, str);
+
+   // clean up: for LeakSanitizer
+   csa_free(&c);
 }
 
 #ifdef EXT
