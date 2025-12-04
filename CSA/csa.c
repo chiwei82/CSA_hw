@@ -135,6 +135,8 @@ void test(void)
    // it means update_block works
    assert(csa_get(c,  67, &n));
    assert(csa_get(c,  257, &n));
+   csa_free(&c);
+   
    // move_and_insert
    // desired: if we insert block with lower offset
    // it will still stay ordered by offset
